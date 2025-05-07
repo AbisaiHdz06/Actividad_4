@@ -125,7 +125,7 @@ resource "aws_instance" "jump_server" {
 
 # --- Web Servers  ---
 resource "aws_instance" "web_server" {
-  count                  = 4
+  count                  = 1
   ami                    = "ami-0c2b8ca1dad447f8a" # Amazon Linux 2
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.subnet_public.id
